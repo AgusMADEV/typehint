@@ -1,0 +1,55 @@
+/* TypeHint Namespace Styles */
+.agusmadev-typehint-input-wrapper {
+  position: relative !important;
+  
+  width: 100% !important;
+  
+}
+
+/* Style for the input fields */
+.agusmadev-typehint-input-wrapper input {
+  width: 100% !important; 
+    padding: 10px 10px 10px 50px !important;
+    font-size: 16px !important;
+    border: 1px solid #ccc !important;
+    border-radius: 5px !important;
+    outline: none !important;
+    /* position: absolute;*/
+        padding: 10px 10px 10px 50px !important;
+}
+
+.agusmadev-typehint-input-wrapper input:focus {
+  border-color: #007BFF !important;
+}
+
+/* Style for the icons with relief effect */
+.agusmadev-typehint-input-wrapper .agusmadev-typehint-input-icon {
+  position: absolute !important;
+    position: absolute !important;
+    position: absolute !important;
+    top: 20px !important;
+    left: 7px !important;
+    transform: translateY(-50%) !important;
+    font-size: 12px !important;
+    color: #888 !important;
+    background-color: #f0f0f0 !important;
+    border: 1px solid #ccc !important;
+    border-radius: 40px !important;
+    padding: 4px !important;
+    pointer-events: none !important;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important; */
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    line-height: 21px;
+}
+
+/* agusmadev-typehint Label Styles */
+.agusmadev-typehint-input-label {
+  display: block;
+  margin-bottom: 5px !important;
+  font-size: 14px !important;
+  font-weight: bold !important;
+  color: #555 !important;
+}
+
