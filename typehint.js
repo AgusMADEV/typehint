@@ -28,6 +28,16 @@ document.addEventListener("DOMContentLoaded", () => {
             input.parentNode.insertBefore(wrapper, input);
             wrapper.appendChild(input);
             wrapper.appendChild(icon);
+
+            // Move icon on focus and blur
+            input.addEventListener('focus', () => {
+                icon.classList.add('focused');
+            });
+            input.addEventListener('blur', () => {
+                if (input.value === "") { // Only return if input is empty
+                    icon.classList.remove('focused');
+                }
+            });
         }
     });
 });

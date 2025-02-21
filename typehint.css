@@ -21,42 +21,56 @@
 /* Style for input fields */
 .agusmadev-typehint-input-wrapper input {
   flex: 1;
-  padding: 12px 14px 12px 45px;
+  padding: 12px 14px 12px 45px; /* Space for the icon */
   font-size: 16px;
-  border: 1px solid transparent;
+  border: 1px solid transparent; /* Default border is transparent */
   border-radius: var(--border-radius);
   background: var(--input-bg);
   box-shadow: var(--shadow-light);
   transition: all 0.3s ease;
+  position: relative;
 }
 
+/* Hover effect */
 .agusmadev-typehint-input-wrapper input:hover {
   background: var(--input-hover-bg);
 }
 
+/* Focus effect for the input (border and shadow) */
 .agusmadev-typehint-input-wrapper input:focus {
-  border-color: var(--primary-color);
+  border-color: var(--primary-color); /* Blue border only on focus */
   box-shadow: var(--shadow-hover);
   outline: none;
 }
 
-/* Icon styles */
+/* Create the "cut" effect on top when focused */
+.agusmadev-typehint-input-wrapper input:focus::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 12px; /* Same height as the icon area */
+  background-color: white; /* Same color as the input background */
+  z-index: 1; /* Makes sure the cut is above the input but below the icon */
+}
+
+/* Icon styles - Positioned inside the input field */
 .agusmadev-typehint-input-icon {
   position: absolute;
   left: 12px;
+  top: 12px; /* Center icon vertically inside the input */
   font-size: 18px;
   color: var(--primary-color);
-  background: rgba(0, 120, 212, 0.1);
-  padding: 6px;
-  border-radius: 50%;
-  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  opacity: 0.8;
+  pointer-events: none;
+  transition: transform 0.3s ease, top 0.3s ease;
 }
 
-/* Label styles */
-.agusmadev-typehint-input-label {
-  font-size: 14px;
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 4px;
-  display: block;
+/* Focus effect for the icon (move up when focused) */
+.agusmadev-typehint-input-icon.focused {
+  transform: translateY(-18px); /* Moves the icon up */
+  top: 4px; /* Adjust position when focused */
 }
