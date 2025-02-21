@@ -1,55 +1,62 @@
-/* TypeHint Namespace Styles */
-.agusmadev-typehint-input-wrapper {
-  position: relative !important;
-  
-  width: 100% !important;
-  
+/* TypeHint - Fluent UI Inspired Styles */
+
+:root {
+  --primary-color: #0078D4; /* Fluent UI blue */
+  --border-radius: 6px;
+  --input-bg: rgba(255, 255, 255, 0.6);
+  --input-hover-bg: rgba(255, 255, 255, 0.8);
+  --shadow-light: 0 2px 5px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Style for the input fields */
+/* Container for inputs */
+.agusmadev-typehint-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+/* Style for input fields */
 .agusmadev-typehint-input-wrapper input {
-  width: 100% !important; 
-    padding: 10px 10px 10px 50px !important;
-    font-size: 16px !important;
-    border: 1px solid #ccc !important;
-    border-radius: 5px !important;
-    outline: none !important;
-    /* position: absolute;*/
-        padding: 10px 10px 10px 50px !important;
+  flex: 1;
+  padding: 12px 14px 12px 45px;
+  font-size: 16px;
+  border: 1px solid transparent;
+  border-radius: var(--border-radius);
+  background: var(--input-bg);
+  box-shadow: var(--shadow-light);
+  transition: all 0.3s ease;
+}
+
+.agusmadev-typehint-input-wrapper input:hover {
+  background: var(--input-hover-bg);
 }
 
 .agusmadev-typehint-input-wrapper input:focus {
-  border-color: #007BFF !important;
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow-hover);
+  outline: none;
 }
 
-/* Style for the icons with relief effect */
-.agusmadev-typehint-input-wrapper .agusmadev-typehint-input-icon {
-  position: absolute !important;
-    position: absolute !important;
-    position: absolute !important;
-    top: 20px !important;
-    left: 7px !important;
-    transform: translateY(-50%) !important;
-    font-size: 12px !important;
-    color: #888 !important;
-    background-color: #f0f0f0 !important;
-    border: 1px solid #ccc !important;
-    border-radius: 40px !important;
-    padding: 4px !important;
-    pointer-events: none !important;
-    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important; */
-    height: 30px;
-    width: 30px;
-    text-align: center;
-    line-height: 21px;
+/* Icon styles */
+.agusmadev-typehint-input-icon {
+  position: absolute;
+  left: 12px;
+  font-size: 18px;
+  color: var(--primary-color);
+  background: rgba(0, 120, 212, 0.1);
+  padding: 6px;
+  border-radius: 50%;
+  text-align: center;
 }
 
-/* agusmadev-typehint Label Styles */
+/* Label styles */
 .agusmadev-typehint-input-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
   display: block;
-  margin-bottom: 5px !important;
-  font-size: 14px !important;
-  font-weight: bold !important;
-  color: #555 !important;
 }
-
